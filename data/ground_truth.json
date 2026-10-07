@@ -1,0 +1,14 @@
+{
+  "target": "converted",
+  "design": "randomized A/B, 50/50 control vs treatment",
+  "true_average_treatment_effect_pp": 7.08,
+  "baseline_logit": "-2.30 +0.020*z(age) +0.45*[desktop] +0.30*log1p(prior_purchases) -0.0004*tenure_days",
+  "treatment_uplift_additive_on_prob": {
+    "base": 0.03,
+    "mobile": "+0.045",
+    "tenure<30": "+0.040",
+    "prior_purchases==0": "+0.015",
+    "clipped": "[0,0.25]"
+  },
+  "note": "Effect is heterogeneous: largest for mobile and brand-new users. Recover CATE and compare."
+}
